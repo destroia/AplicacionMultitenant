@@ -3,14 +3,16 @@ using Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Data.Migrations
 {
     [DbContext(typeof(ContextDBMaster))]
-    partial class ContextDBMasterModelSnapshot : ModelSnapshot
+    [Migration("20231025210602_InitialCreate3")]
+    partial class InitialCreate3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,7 +33,7 @@ namespace Data.Migrations
                     b.Property<string>("Imagen")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Sinopsis")
+                    b.Property<string>("Sinompsis")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Titulo")

@@ -1,4 +1,5 @@
-﻿using Business.Organizations;
+﻿using Business.Films;
+using Business.Organizations;
 using Business.Products;
 using Business.Tenant;
 using Business.Users;
@@ -16,6 +17,7 @@ namespace Business
             services.AddScoped<BITenant, BTenant>();
             services.AddScoped<BIUser, BUser>();
             services.AddScoped<BIProduct, BProduct>();
+            services.AddScoped<BIFilm, BFilm>();
             services.AddContexDb(configuration);
 
             return services;

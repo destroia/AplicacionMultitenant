@@ -1,4 +1,5 @@
-﻿using Data.Organizations;
+﻿using Data.Films;
+using Data.Organizations;
 using Data.Products;
 using Data.Tenants;
 using Data.Users;
@@ -16,6 +17,7 @@ namespace Data
             services.AddScoped<DIUser, DUser>();
             services.AddScoped<DIOrganization, DOrganization>();
             services.AddScoped<DIProduct, DProduct>();
+            services.AddScoped<DIFilm, DFilm>();
 
             services.AddDbContext<ContextDBMaster>(options => options.UseSqlServer(configuration.GetConnectionString("ConnectionMainOrganizacionUsuario")));
             services.AddDbContext<ContextDBTenant>(options => options.UseSqlServer(configuration.GetConnectionString("ConnectionMainProductoOrganizacion")));

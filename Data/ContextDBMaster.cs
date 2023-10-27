@@ -25,5 +25,7 @@ namespace Data
         }
         public DbSet<Organization> Organizations { get; set; }
         public DbSet<User> Users { get; set; }
+        
+        public DbSet<Film> Films { get; set; }
     }
 }
